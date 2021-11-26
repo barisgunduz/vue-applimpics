@@ -30,13 +30,7 @@
 			</v-list>
 		</v-navigation-drawer>
 
-		<v-app-bar
-			app
-			color="primary"
-			dark
-			src="mountains.jpg"
-			prominent
-		>
+		<v-app-bar app color="primary" dark src="mountains.jpg" prominent>
 			<template v-slot:img="{ props }">
 				<v-img
 					v-bind="props"
@@ -65,6 +59,7 @@
 
 		<v-main>
 			<router-view></router-view>
+			<snackbar />
 		</v-main>
 	</v-app>
 </template>
@@ -78,5 +73,8 @@ export default {
 			{ title: "About", icon: "mdi-help-box", to: "/about" },
 		],
 	}),
+	components: {
+		snackbar: require("@/components/Shared/Snackbar.vue").default,
+	},
 };
 </script>
