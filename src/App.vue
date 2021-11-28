@@ -3,10 +3,12 @@
 		<v-navigation-drawer v-model="drawer" app>
 			<v-list-item>
 				<v-list-item-content>
-					<v-list-item-title class="text-h6">
-						Vuetify ToDo
+					<v-list-item-title class="title">
+						Vuetify Todo
 					</v-list-item-title>
-					<v-list-item-subtitle> BG Todo's </v-list-item-subtitle>
+					<v-list-item-subtitle>
+						Best Todo Ever!
+					</v-list-item-subtitle>
 				</v-list-item-content>
 			</v-list-item>
 
@@ -40,7 +42,7 @@
 
 			<v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
-			<v-app-bar-title>Title</v-app-bar-title>
+			<v-toolbar-title>Vuetify Todo</v-toolbar-title>
 
 			<v-spacer></v-spacer>
 
