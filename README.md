@@ -1,4 +1,23 @@
-# vuetify-todo
+# Vue Applimpics
+## Vue app with many options.
+- Todo App
+- About Page
+- Other pages (Coming soon...)
+
+## Tech Stack & Features
+- Vue
+- Vuex
+- Vue Router
+- Components
+- Snackbars
+- Dialogs
+- Search
+- Vue Draggable
+- Persistent Data with Localbase
+
+## Project Link
+You can view and analyze the app via : 
+[Netlify Link](https://vue-applimpics.netlify.app/)
 
 ## Project setup
 ```
