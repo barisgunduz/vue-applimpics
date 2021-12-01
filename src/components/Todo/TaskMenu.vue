@@ -60,7 +60,7 @@ export default {
 				title: "Due date",
 				icon: "mdi-calendar",
 				click() {
-					this.dialogs.dueDate = true
+					this.dialogs.dueDate = true;
 				},
 			},
 			{
@@ -74,7 +74,14 @@ export default {
 				title: "Sort",
 				icon: "mdi-drag-horizontal-variant",
 				click() {
-					this.$store.commit('toggleSorting');
+					if (!this.$store.state.search) {
+						this.$store.commit("toggleSorting");
+					} else {
+						this.$store.commit(
+							"showSnackbar",
+							"How DARE you try to sort while searching!"
+						);
+					}
 				},
 			},
 		],
@@ -87,8 +94,8 @@ export default {
 	components: {
 		"dialog-edit": require("@/components/Todo/Dialogs/DialogEdit.vue")
 			.default,
-		"dialog-due-date": require("@/components/Todo/Dialogs/DialogDueDate.vue")
-			.default,
+		"dialog-due-date":
+			require("@/components/Todo/Dialogs/DialogDueDate.vue").default,
 		"dialog-delete": require("@/components/Todo/Dialogs/DialogDelete.vue")
 			.default,
 	},

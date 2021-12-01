@@ -8,11 +8,12 @@
 	>
 		<v-date-picker v-model="date" scrollable>
 			<v-spacer></v-spacer>
-			<v-btn @click="$emit('close')" text color="primary" > Cancel </v-btn>
+			<v-btn @click="$emit('close')" text color="primary"> Cancel </v-btn>
 			<v-btn @click="saveTask" text color="primary"> OK </v-btn>
 		</v-date-picker>
 	</v-dialog>
 </template>
+
 <script>
 export default {
 	props: ["task"],
@@ -28,7 +29,7 @@ export default {
 				dueDate: this.date,
 			};
 			this.$store.dispatch("updateTaskDueDate", payload);
-            this.$emit('close');
+			this.$emit("close");
 		},
 	},
 	mounted() {
@@ -38,4 +39,5 @@ export default {
 	},
 };
 </script>
-<style lang=""></style>
+
+<style></style>

@@ -1,8 +1,12 @@
 <template>
-	<div class="text-subtitle-1 ml-4">{{ date }}</div>
+	<div class="text-subtitle-1 ml-4">
+		{{ date }}
+	</div>
 </template>
+
 <script>
 import { format } from "date-fns";
+
 export default {
 	data() {
 		return {
@@ -20,4 +24,5 @@ export default {
 	},
 };
 </script>
-<style lang=""></style>
+
+<style></style>

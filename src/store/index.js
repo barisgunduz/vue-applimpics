@@ -1,6 +1,5 @@
 import Vue from "vue";
 import Vuex from "vuex";
-
 import Localbase from "localbase";
 
 let db = new Localbase("db");
@@ -14,23 +13,23 @@ export default new Vuex.Store({
 		search: null,
 		tasks: [
 			// {
-			// 	id: 1,
-			// 	title: "Wake up",
-			// 	done: false,
-			// 	dueDate: "2021-12-16",
+			//   id: 1,
+			//   title: 'Wake up',
+			//   done: false,
+			//   dueDate: '2020-10-16'
 			// },
 			// {
-			// 	id: 2,
-			// 	title: "Get bananas",
-			// 	done: false,
-			// 	dueDate: "2021-12-17",
+			//   id: 2,
+			//   title: 'Get bananas',
+			//   done: false,
+			//   dueDate: '2020-10-17'
 			// },
 			// {
-			// 	id: 3,
-			// 	title: "Eat bananas",
-			// 	done: false,
-			// 	dueDate: null,
-			// },
+			//   id: 3,
+			//   title: 'Eat bananas',
+			//   done: false,
+			//   dueDate: null
+			// }
 		],
 		snackbar: {
 			show: false,
@@ -42,6 +41,7 @@ export default new Vuex.Store({
 		setSearch(state, value) {
 			state.search = value;
 		},
+
 		addTask(state, newTask) {
 			state.tasks.push(newTask);
 		},
@@ -63,6 +63,7 @@ export default new Vuex.Store({
 		setTasks(state, tasks) {
 			state.tasks = tasks;
 		},
+
 		showSnackbar(state, text) {
 			let timeout = 0;
 			if (state.snackbar.show) {
@@ -77,6 +78,7 @@ export default new Vuex.Store({
 		hideSnackbar(state) {
 			state.snackbar.show = false;
 		},
+
 		toggleSorting(state) {
 			state.sorting = !state.sorting;
 		},
@@ -135,7 +137,7 @@ export default new Vuex.Store({
 				})
 				.then(() => {
 					commit("updateTaskDueDate", payload);
-					commit("showSnackbar", "Due Date updated!");
+					commit("showSnackbar", "Due Date Updated!");
 				});
 		},
 		setTasks({ commit }, tasks) {

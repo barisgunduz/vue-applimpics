@@ -46,6 +46,7 @@
 
 <script>
 import { format } from "date-fns";
+
 export default {
 	props: ["task"],
 	filters: {
@@ -58,9 +59,10 @@ export default {
 	},
 };
 </script>
+
 <style lang="sass">
 .sortable-ghost
-	opacity: 0
+  opacity: 0
 .sortable-drag
-	box-shadow: 0 0 10px rgba(0,0,0,0.3)
+  box-shadow: 0 0 10px rgba(0,0,0,0.3)
 </style>

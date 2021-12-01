@@ -9,14 +9,14 @@
 			>
 				<v-avatar size="70" class="mb-2">
 					<img
-						src="https://en.gravatar.com/userimage/118127490/e570cd0ca66d0e3a14d05f891c5d1e90.jpg?size=200"
-						alt="Barış Gündüz"
+						src="https://s.gravatar.com/avatar/ce7f3697e231df38b3ca6065848520da?s=160"
+						alt="Danny Connell"
 					/>
 				</v-avatar>
 				<div class="white--text text-subtitle-1 font-weight-bold">
-					Barış Gündüz
+					Danny Connell
 				</div>
-				<div class="white--text text-subtitle-2">barisgunduz</div>
+				<div class="white--text text-subtitle-2">danny__connell</div>
 			</v-img>
 
 			<v-list dense nav>
@@ -43,12 +43,12 @@
 			dark
 			src="mountains.jpg"
 			prominent
-			height="170"
+			:height="$route.path === '/' ? '238' : '170'"
 		>
 			<template v-slot:img="{ props }">
 				<v-img
 					v-bind="props"
-					gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+					gradient="to top right, rgba(19,84,122,.9), rgba(128,208,199,.9)"
 				></v-img>
 			</template>
 
@@ -61,12 +61,15 @@
 					<search />
 				</v-row>
 				<v-row>
-					<v-toolbar-title class="text-h4 ml-4"
-						>{{ $store.state.appTitle }}</v-toolbar-title
-					>
+					<v-toolbar-title class="text-h4 ml-4">
+						{{ $store.state.appTitle }}
+					</v-toolbar-title>
 				</v-row>
 				<v-row>
 					<live-date-time />
+				</v-row>
+				<v-row v-if="$route.path === '/'">
+					<field-add-task />
 				</v-row>
 			</v-container>
 		</v-app-bar>
@@ -88,17 +91,19 @@ export default {
 		],
 	}),
 	mounted() {
-		this.$store.dispatch("getTasks")
+		this.$store.dispatch("getTasks");
 	},
 	components: {
 		search: require("@/components/Tools/Search.vue").default,
 		"live-date-time": require("@/components/Tools/LiveDateTime.vue")
 			.default,
+		"field-add-task": require("@/components/Todo/FieldAddTask.vue").default,
 		snackbar: require("@/components/Shared/Snackbar.vue").default,
 	},
 };
 </script>
+
 <style lang="sass">
 .header-container
-	max-width: none !important
+  max-width: none
 </style>
