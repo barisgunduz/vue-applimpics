@@ -9,14 +9,14 @@
 			>
 				<v-avatar size="70" class="mb-2">
 					<img
-						src="https://s.gravatar.com/avatar/ce7f3697e231df38b3ca6065848520da?s=160"
-						alt="Danny Connell"
+						src="https://en.gravatar.com/userimage/118127490/e570cd0ca66d0e3a14d05f891c5d1e90.jpg?size=200"
+						alt="Barış Gündüz"
 					/>
 				</v-avatar>
 				<div class="white--text text-subtitle-1 font-weight-bold">
-					Danny Connell
+					Barış Gündüz
 				</div>
-				<div class="white--text text-subtitle-2">danny__connell</div>
+				<div class="white--text text-subtitle-2">barisgunduz</div>
 			</v-img>
 
 			<v-list dense nav>
