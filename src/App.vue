@@ -1,18 +1,23 @@
 <template>
 	<v-app id="inspire">
-		<v-navigation-drawer v-model="drawer" app>
-			<v-list-item>
-				<v-list-item-content>
-					<v-list-item-title class="title">
-						Vuetify Todo
-					</v-list-item-title>
-					<v-list-item-subtitle>
-						Best Todo Ever!
-					</v-list-item-subtitle>
-				</v-list-item-content>
-			</v-list-item>
-
-			<v-divider></v-divider>
+		<v-navigation-drawer v-model="drawer" :mobile-breakpoint="768" app>
+			<v-img
+				class="pa-4 pt-7"
+				src="mountains.jpg"
+				height="170"
+				gradient="to top right, rgba(19,84,122,.5), rgba(128,208,199,.8)"
+			>
+				<v-avatar size="70" class="mb-2">
+					<img
+						src="https://en.gravatar.com/userimage/118127490/e570cd0ca66d0e3a14d05f891c5d1e90.jpg?size=200"
+						alt="Barış Gündüz"
+					/>
+				</v-avatar>
+				<div class="white--text text-subtitle-1 font-weight-bold">
+					Barış Gündüz
+				</div>
+				<div class="white--text text-subtitle-2">barisgunduz</div>
+			</v-img>
 
 			<v-list dense nav>
 				<v-list-item
@@ -47,7 +52,7 @@
 				></v-img>
 			</template>
 
-			<v-container class="pa-0">
+			<v-container class="header-container pa-0">
 				<v-row>
 					<v-app-bar-nav-icon
 						@click="drawer = !drawer"
@@ -90,3 +95,7 @@ export default {
 	},
 };
 </script>
+<style lang="sass">
+.header-container
+	max-width: none !important
+</style>
